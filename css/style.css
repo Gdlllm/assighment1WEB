@@ -1,259 +1,3 @@
-/* One simple CSS file for both pages */
-
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #f2f2f2;
-  color: #222222;
-}
-
-/* Home page: Flexbox navigation and cards, CSS Grid page layout and gallery */
-.site-layout {
-  min-height: 100vh;
-  display: grid;
-  grid-template-columns: minmax(180px, 240px) minmax(0, 1fr);
-  grid-template-areas:
-    "header header"
-    "sidebar main"
-    "footer footer";
-}
-
-.site-header {
-  grid-area: header;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 24px;
-  padding: 18px max(24px, calc((100% - 1200px) / 2));
-  background-color: #171717;
-}
-
-.logo {
-  color: #ffffff;
-  font-size: 1.25rem;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  text-decoration: none;
-}
-
-.site-nav {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  gap: 18px;
-}
-
-.site-nav a {
-  color: #ffffff;
-  font-weight: 700;
-  text-decoration: none;
-}
-
-.site-nav a:hover {
-  color: #ff4d4d;
-}
-
-.sidebar {
-  grid-area: sidebar;
-  padding: 28px 20px;
-  background-color: #e5e5e5;
-}
-
-.sidebar h2 {
-  margin-top: 0;
-  font-size: 1.15rem;
-}
-
-.sidebar a {
-  display: block;
-  margin: 12px 0;
-  color: #222222;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.sidebar a:hover {
-  color: #d00000;
-}
-
-.home-page main {
-  grid-area: main;
-  width: min(1100px, 100%);
-  margin: 0 auto;
-  padding: 24px;
-  box-sizing: border-box;
-}
-
-.home-page footer {
-  grid-area: footer;
-}
-
-.hero-section {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(280px, 1.2fr);
-  align-items: center;
-  gap: 32px;
-  padding: 28px;
-  background-color: #ffffff;
-  border-left: 5px solid #d00000;
-}
-
-.eyebrow {
-  margin: 0 0 6px;
-  color: #d00000;
-  font-size: 0.8rem;
-  font-weight: 800;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-}
-
-.primary-button {
-  display: inline-block;
-  margin-top: 12px;
-  padding: 11px 18px;
-  background-color: #d00000;
-  color: #ffffff;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.primary-button:hover {
-  background-color: #900000;
-}
-
-.hero-section .main-image {
-  height: 280px;
-}
-
-.content-section {
-  margin: 42px 0;
-}
-
-.section-heading h2 {
-  margin-top: 0;
-}
-
-.driver-cards {
-  display: flex;
-  gap: 20px;
-}
-
-.driver-card {
-  display: flex;
-  flex: 1 1 0;
-  flex-direction: column;
-  overflow: hidden;
-  background-color: #ffffff;
-  border: 1px solid #d7d7d7;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.driver-card:hover {
-  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.18);
-  transform: translateY(-6px);
-}
-
-.driver-card img {
-  width: 100%;
-  height: 210px;
-  object-fit: cover;
-}
-
-.driver-card-content {
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  padding: 18px;
-}
-
-.driver-card-content h3 {
-  margin-top: 0;
-}
-
-.driver-card-content .red-link {
-  margin-top: auto;
-}
-
-.image-gallery {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 18px;
-}
-
-.gallery-item {
-  position: relative;
-  margin: 0;
-  min-height: 280px;
-  overflow: hidden;
-  background-color: #222222;
-}
-
-.gallery-item img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  min-height: 280px;
-  object-fit: cover;
-  transition: transform 0.3s ease;
-}
-
-.gallery-item figcaption {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  padding: 16px;
-  background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
-  color: #ffffff;
-  font-weight: bold;
-  opacity: 0;
-  transform: translateY(12px);
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-.gallery-item:hover img {
-  transform: scale(1.06);
-}
-
-.gallery-item:hover figcaption {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-h1, h2, h3 {
-  color: #d00000;
-}
-
-.box {
-  max-width: 900px;
-  margin: 20px auto;
-  padding: 20px;
-  border: 1px solid #bbbbbb;
-  background-color: white;
-}
-
-.gray-box {
-  background-color: #e5e5e5;
-}
-
-.main-image {
-  width: 100%;
-  height: 350px;
-  object-fit: cover;
-}
-
-.profile-image {
-  width: 250px;
-  height: 250px;
-  object-fit: cover;
-  border: 1px solid #d00000;
-  border-radius: 50%;
-}
-
-.red-link {
-  color: #d80000;
-  font-weight: bold;
-  text-decoration: none;
 }
 
 .red-link:hover {
@@ -360,3 +104,25 @@ footer {
     grid-template-columns: 1fr;
   }
 }
+
+
+/* Kimi and Michael — profile pages */
+.profile-page { min-height: 100vh; display: flex; flex-direction: column; }
+.profile-main { width: min(1100px, 100%); margin: 0 auto; padding: 28px 24px 44px; box-sizing: border-box; flex: 1; }
+.profile-hero { display: flex; align-items: center; gap: 32px; padding: 28px; margin-bottom: 28px; background: #fff; border-left: 5px solid #d00000; box-shadow: 0 4px 16px rgba(0,0,0,.07); }
+.profile-hero-image { display: block; flex: 0 1 42%; width: 42%; max-width: 420px; height: 390px; object-fit: cover; border-radius: 8px; transition: filter .2s ease; }
+.profile-hero-image:hover { filter: contrast(1.08); }
+.profile-hero-content { flex: 1; min-width: 0; }
+.profile-hero-content h1 { margin-top: 0; font-size: clamp(2rem, 4vw, 3.2rem); }
+.profile-tag { display: inline-block; padding: 6px 11px; margin-bottom: 8px; background: #ffe5e5; color: #a00000; font-size: .8rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; border-radius: 3px; }
+.profile-facts { display: flex; flex-wrap: wrap; gap: 12px; margin: 18px 0; }
+.profile-fact { flex: 1 1 120px; padding: 12px; background: #f2f2f2; border-radius: 5px; }
+.profile-fact strong { display: block; color: #d00000; margin-bottom: 4px; }
+.profile-sections { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.profile-panel { padding: 22px; background: #fff; border: 1px solid #ddd; border-radius: 6px; }
+.profile-panel h2 { margin-top: 0; }
+.profile-panel li { margin-bottom: 9px; line-height: 1.5; }
+.profile-back { display: inline-block; margin-top: 18px; padding: 11px 17px; background: #d00000; color: #fff; font-weight: bold; text-decoration: none; border-radius: 3px; transition: background .2s ease, transform .2s ease; }
+.profile-back:hover { background: #900000; transform: translateY(-2px); }
+@media (max-width: 760px) {
+  .profile-main { padding: 18px 14px 30px; }
