@@ -7,94 +7,140 @@
   <title>Formula 1</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-  <main>
-    <section class="box">
-      <h1>Formula 1</h1>
-      <h2>Welcome to my Formula 1 website</h2>
-      <img class="main-image" src="images/f1-grid.jpg" alt="Formula 1 cars racing on a track">
-      <p>Formula 1 is a popular car racing sport. Drivers race very fast cars on tracks around the world.</p>
-      <p><a class="red-link" href="verstappen.html">Click here to read about Max Verstappen.</a></p>
-    </section>
+<body class="home-page">
+  <div class="site-layout">
+    <header class="site-header">
+      <a class="logo" href="index.html">F1 RACING</a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="#home">Home</a>
+        <a href="#drivers">Drivers</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact-form">Contact</a>
+      </nav>
+    </header>
 
-    <section class="box">
-      <h2>F1 drivers</h2>
-      <ul>
-        <li><a class="red-link" href="verstappen.html">Max Verstappen</a></li>
-        <li><a class="red-link" href="kimi.html">Kimi Antonelli</a></li>
-        <li><a class="red-link" href="shumakher.html">Michael Schumacher</a></li>
-      </ul>
-    </section>
+    <aside class="sidebar">
+      <h2>Quick links</h2>
+      <a href="verstappen.html">Max Verstappen</a>
+      <a href="kimi.html">Kimi Antonelli</a>
+      <a href="shumakher.html">Michael Schumacher</a>
+      <a href="#race-weekend">Race weekend</a>
+    </aside>
 
-    <section class="box gray-box">
-      <h2>Race weekend</h2>
-      <ol>
-        <li>Practice</li>
-        <li>Qualifying</li>
-        <li>Race</li>
-      </ol>
+    <main id="home">
+      <section class="hero-section">
+        <div>
+          <p class="eyebrow">Formula 1</p>
+          <h1>Welcome to Formula 1</h1>
+          <p>Formula 1 is a popular car racing sport. Drivers race very fast cars on tracks around the world.</p>
+          <a class="primary-button" href="#drivers">Meet the drivers</a>
+        </div>
+        <img class="main-image" src="images/f1-grid.jpg" alt="Formula 1 cars racing on a track">
+      </section>
 
-      <table>
-        <caption>F1 weekend schedule</caption>
-        <tr>
-          <th>Session</th>
-          <th>Day</th>
-          <th>Purpose</th>
-        </tr>
-        <tr>
-          <td>Practice</td>
-          <td>Friday</td>
-          <td>Learn the track</td>
-        </tr>
-        <tr>
-          <td>Qualifying</td>
-          <td>Saturday</td>
-          <td>Set a fast lap</td>
-        </tr>
-        <tr>
-          <td>Race</td>
-          <td>Sunday</td>
-          <td>Find the winner</td>
-        </tr>
-      </table>
-    </section>
+      <section id="drivers" class="content-section">
+        <div class="section-heading">
+          <p class="eyebrow">Drivers</p>
+          <h2>Formula 1 stars</h2>
+        </div>
+        <div class="driver-cards">
+          <article class="driver-card">
+            <img src="images/max-verstappen.jpg" alt="Max Verstappen">
+            <div class="driver-card-content">
+              <h3>Max Verstappen</h3>
+              <p>Red Bull Racing driver and multiple Formula 1 World Champion.</p>
+              <a class="red-link" href="verstappen.html">Read about Max</a>
+            </div>
+          </article>
+          <article class="driver-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAQFdqIPreK1_gbnSPR73BdVrCHcev5YCFEOJL2cGdww&s=10" alt="Kimi Antonelli">
+            <div class="driver-card-content">
+              <h3>Kimi Antonelli</h3>
+              <p>A young Mercedes driver with strong pace and potential.</p>
+              <a class="red-link" href="kimi.html">Read about Kimi</a>
+            </div>
+          </article>
+          <article class="driver-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbxDVHlgkG4AIsfy1YT9bVeD6kbV55xHc-P2huSgAtvw&s=10" alt="Michael Schumacher">
+            <div class="driver-card-content">
+              <h3>Michael Schumacher</h3>
+              <p>A Formula 1 legend and seven-time World Champion.</p>
+              <a class="red-link" href="shumakher.html">Read about Michael</a>
+            </div>
+          </article>
+        </div>
+      </section>
 
-    <section class="box">
-      <h2>About team members</h2>
-      <p>Our team has two students. We chose Formula 1 because we like cars and racing.</p>
-      <ul>
-        <li>Dinmukhamed: Home page and Max Verstappen page.</li>
-        <li>Asylzhan: Kimi Antonelli and Michael Schumacher pages.</li>
-      </ul>
-    </section>
+      <section id="gallery" class="content-section gallery-section">
+        <div class="section-heading">
+          <p class="eyebrow">Gallery</p>
+          <h2>Max Verstappen</h2>
+        </div>
+        <div class="image-gallery">
+          <figure class="gallery-item">
+            <img src="images/Max1.jpg" alt="Max Verstappen at the Formula 1 paddock">
+            <figcaption>Max Verstappen at the paddock</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="images/Max2.jpg" alt="Max Verstappen at a Formula 1 race">
+            <figcaption>Max Verstappen on race weekend</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="images/Max3.jpg" alt="Max Verstappen after a Formula 1 win">
+            <figcaption>Max Verstappen after a win</figcaption>
+          </figure>
+        </div>
+      </section>
 
-    <section class="box gray-box" id="contact-form">
-      <h2>Contact form</h2>
-      <form action="#contact-form" method="get">
-        <label for="name">Name:</label>
-        <input id="name" name="name" type="text" required>
+      <section class="box gray-box" id="race-weekend">
+        <h2>Race weekend</h2>
+        <ol>
+          <li>Practice</li>
+          <li>Qualifying</li>
+          <li>Race</li>
+        </ol>
+        <table>
+          <caption>F1 weekend schedule</caption>
+          <tr><th>Session</th><th>Day</th><th>Purpose</th></tr>
+          <tr><td>Practice</td><td>Friday</td><td>Learn the track</td></tr>
+          <tr><td>Qualifying</td><td>Saturday</td><td>Set a fast lap</td></tr>
+          <tr><td>Race</td><td>Sunday</td><td>Find the winner</td></tr>
+        </table>
+      </section>
 
-        <label for="email">Email:</label>
-        <input id="email" name="email" type="email" required>
+      <section class="box">
+        <h2>About team members</h2>
+        <p>Our team has two students. We chose Formula 1 because we like cars and racing.</p>
+        <ul>
+          <li>Dinmukhamed: Home page and Max Verstappen page.</li>
+          <li>Asylzhan: Kimi Antonelli and Michael Schumacher pages.</li>
+        </ul>
+      </section>
 
-        <label for="colour">Favourite team colour:</label>
-        <select id="colour" name="colour" required>
-          <option value="">Choose one</option>
-          <option value="red">Red</option>
-          <option value="blue">Blue</option>
-          <option value="silver">Silver</option>
-        </select>
+      <section class="box gray-box" id="contact-form">
+        <h2>Contact form</h2>
+        <form action="#contact-form" method="get">
+          <label for="name">Name:</label>
+          <input id="name" name="name" type="text" required>
+          <label for="email">Email:</label>
+          <input id="email" name="email" type="email" required>
+          <label for="colour">Favourite team colour:</label>
+          <select id="colour" name="colour" required>
+            <option value="">Choose one</option>
+            <option value="red">Red</option>
+            <option value="blue">Blue</option>
+            <option value="silver">Silver</option>
+          </select>
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+          <button type="submit">Send</button>
+        </form>
+      </section>
+    </main>
 
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" rows="4" required></textarea>
-
-        <button type="submit">Send</button>
-      </form>
-    </section>
-  </main>
-
-  <footer>
-    <p>Team members: Dinmukhamed and Asylzhan</p>
-  </footer>
+    <footer>
+      <p>Team members: Dinmukhamed and Asylzhan</p>
+    </footer>
+  </div>
 </body>
 </html>
