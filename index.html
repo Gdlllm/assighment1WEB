@@ -16,7 +16,7 @@
   <script src="js/script.js"></script>
 </head>
 <body>
-  <div class="scroll-track" aria-hidden="true"><div id="scroll-progress"></div></div>
+  <div id="scroll-progress" aria-hidden="true"></div>
 
   <header>
     <nav class="navbar navbar-expand-lg bg-black" data-bs-theme="dark">
@@ -68,34 +68,34 @@
           <div class="driver-search mb-3">
             <label class="form-label fw-bold" for="driver-query">Search the driver profiles</label>
             <input id="driver-query" class="form-control" type="search" placeholder="Try a name, team or keyword" autocomplete="off" aria-controls="driver-results">
-            <div id="driver-suggestions" aria-label="Suggested driver profiles" hidden></div>
+            <div id="driver-suggestions" class="dropdown-menu w-100" aria-label="Suggested driver profiles"></div>
           </div>
           <p id="driver-count" class="small text-secondary" role="status">3 driver profiles</p>
-          <div id="driver-results" class="row row-cols-1 row-cols-md-3 g-3">
-            <div class="col"><article class="card h-100 driver-card">
+          <div id="driver-results" class="driver-grid">
+            <article class="card driver-card">
               <img src="images/max-verstappen.jpg" class="card-img-top" alt="Max Verstappen">
               <div class="card-body">
                 <h5 class="card-title">Max Verstappen</h5>
                 <p class="card-text">Red Bull Racing driver and multiple Formula 1 World Champion.</p>
                 <a href="verstappen.html" class="btn btn-outline-danger btn-sm">Read about Max</a>
               </div>
-            </article></div>
-            <div class="col"><article class="card h-100 driver-card">
+            </article>
+            <article class="card driver-card">
               <img src="images/Kimi3.jpg" class="card-img-top" alt="Kimi Antonelli">
               <div class="card-body">
                 <h5 class="card-title">Kimi Antonelli</h5>
                 <p class="card-text">A young Mercedes driver with strong pace and potential.</p>
                 <a href="kimi.html" class="btn btn-outline-danger btn-sm">Read about Kimi</a>
               </div>
-            </article></div>
-            <div class="col"><article class="card h-100 driver-card">
+            </article>
+            <article class="card driver-card">
               <img src="images/Michael1.jpg" class="card-img-top" alt="Michael Schumacher">
               <div class="card-body">
                 <h5 class="card-title">Michael Schumacher</h5>
                 <p class="card-text">A Formula 1 legend and seven-time World Champion.</p>
                 <a href="shumakher.html" class="btn btn-outline-danger btn-sm">Read about Michael</a>
               </div>
-            </article></div>
+            </article>
           </div>
         </section>
 

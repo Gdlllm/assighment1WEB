@@ -13,7 +13,7 @@
   <script src="js/script.js"></script>
 </head>
 <body>
-  <div class="scroll-track" aria-hidden="true"><div id="scroll-progress"></div></div>
+  <div id="scroll-progress" aria-hidden="true"></div>
   <header>
     <nav class="navbar navbar-expand-lg bg-black" data-bs-theme="dark" aria-label="Main navigation">
       <div class="container-fluid px-4">
@@ -77,7 +77,10 @@
               <textarea id="contact-message" class="form-control" rows="4" required></textarea>
             </div>
             <button id="message-back" class="btn btn-outline-dark me-2" type="button">Back</button>
-            <button class="btn btn-danger" type="submit">Submit</button>
+            <button class="btn btn-danger" type="submit">
+              <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+              <span class="submit-label">Submit</span>
+            </button>
           </div>
           <p id="message-result" class="mt-3 mb-0" aria-live="polite"></p>
         </form>
@@ -155,7 +158,7 @@
     </div>
   </div>
 
-  <div id="race-toast" role="status" aria-live="polite"></div>
+  <div id="race-toast" role="status">Demo form completed successfully.</div>
   <footer class="bg-dark text-white text-center py-3">
     <p class="mb-0">Team members: Dinmukhamed Tamdybek and Asylzhan Abdukadirov</p>
   </footer>
