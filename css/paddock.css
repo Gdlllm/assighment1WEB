@@ -1,0 +1,59 @@
+.scroll-track {
+  position: fixed;
+  inset: 0 0 auto;
+  height: 5px;
+  z-index: 1100;
+  pointer-events: none;
+}
+#scroll-progress {
+  height: 100%;
+  background: linear-gradient(90deg, #ed0531, #ff792f, #ffc933);
+  transform: scaleX(0);
+  transform-origin: left;
+}
+.driver-search { max-width: 36rem; position: relative; }
+#driver-suggestions {
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  z-index: 4;
+  background: white;
+  border: 1px solid #ccd0d5;
+  box-shadow: 0 0.5rem 1rem #171b211c;
+}
+#driver-suggestions button {
+  display: block;
+  padding: .55rem .8rem;
+  width: 100%;
+  background: white;
+  border: 0;
+  text-align: left;
+}
+#driver-suggestions button:hover, #driver-suggestions button:focus { background: #fff0dd; }
+.driver-card mark { background: #ffe096; padding: 0; }
+.race-stats, .copy-panel {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem 2rem;
+  padding: 1rem 1.25rem;
+}
+.race-stats { background: #191d24; color: white; border-left: 5px solid #dc3545; }
+.race-stats strong { display: block; font: bold 2rem/1.2 system-ui; font-variant-numeric: tabular-nums; }
+.race-stats span { font-size: .9rem; color: #dde0e6; }
+.copy-panel { background: white; border: 1px solid #d3d7de; position: relative; }
+#copy-tip:not(:empty), #race-toast {
+  background: #191d24;
+  color: white;
+  padding: .5rem .85rem;
+  border-radius: .35rem;
+}
+#race-toast {
+  display: none;
+  position: fixed;
+  bottom: 1.25rem;
+  right: 1.25rem;
+  z-index: 1050;
+  border-left: 4px solid #ff9240;
+}
+img[data-src] { background-color: #e2e4e7; color: transparent; }

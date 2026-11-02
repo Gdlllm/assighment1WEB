@@ -1,10 +1,168 @@
-/* My styles for the Bootstrap pages.
-   Bootstrap is connected first, then this file.
-   Task 4: margins and paddings are done with Bootstrap classes (m-, p-),
-   so there is no margin or padding in this file. */
+/* Shared styles for the Bootstrap pages. */
 
 body {
   background-color: #f2f2f2;
+  transition: background-color 0.3s;
+}
+
+.site-main {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.form-narrow { max-width: 680px; }
+
+.featured-photo {
+  display: block;
+  width: 100%;
+  height: 420px;
+  object-fit: contain;
+  background: #111;
+}
+
+.gallery-thumbs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.gallery-thumb {
+  padding: 3px;
+  border: 3px solid transparent;
+  border-radius: 6px;
+  background: white;
+}
+
+.gallery-thumb.selected,
+.gallery-thumb:focus-visible {
+  border-color: #d00000;
+}
+
+.gallery-thumb img {
+  width: 100%;
+  height: 95px;
+  object-fit: cover;
+}
+
+.race-lights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.race-lights span {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #4a1414;
+  box-shadow: inset 0 0 8px #111;
+}
+
+.race-lights.running span {
+  animation: light-up 0.8s ease-in-out;
+}
+
+.race-lights.running span:nth-child(2) { animation-delay: 0.1s; }
+.race-lights.running span:nth-child(3) { animation-delay: 0.2s; }
+.race-lights.running span:nth-child(4) { animation-delay: 0.3s; }
+.race-lights.running span:nth-child(5) { animation-delay: 0.4s; }
+
+@keyframes light-up {
+  0%, 100% { background: #4a1414; transform: scale(1); }
+  50% { background: #ff2020; transform: scale(1.15); }
+}
+
+.rating-star {
+  border: 0;
+  background: transparent;
+  color: #aaa;
+  font-size: 42px;
+  line-height: 1;
+}
+
+.rating-star.selected { color: #d00000; }
+.rating-star:focus-visible { outline: 2px solid #d00000; }
+
+.night-mode {
+  background-color: #171717;
+  color: #f5f5f5;
+}
+
+.night-mode .card,
+.night-mode .hero,
+.night-mode .weekend-box,
+.night-mode .faq-question {
+  background-color: #292929;
+  color: #f5f5f5;
+}
+
+.night-mode .btn-outline-dark {
+  color: #f5f5f5;
+  border-color: #f5f5f5;
+}
+
+.night-mode .btn-outline-dark:hover { color: #171717; background-color: #f5f5f5; }
+
+.form-error {
+  display: block;
+  color: #b00020;
+  min-height: 1.2em;
+}
+
+.faq-question {
+  display: block;
+  width: 100%;
+  padding: 12px 0;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+  background: white;
+  text-align: left;
+  font-weight: bold;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.faq-answer.open {
+  max-height: 120px;
+}
+
+.faq-answer p {
+  margin: 12px 0;
+}
+
+.popup-overlay:not([hidden]) {
+  display: flex;
+}
+
+.popup-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1050;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  background: rgba(0, 0, 0, 0.65);
+}
+
+.popup-box {
+  position: relative;
+  width: min(100%, 420px);
+  padding: 28px;
+  border-radius: 8px;
+  background: white;
+}
+
+.popup-close {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  border: 0;
+  background: transparent;
+  font-size: 28px;
 }
 
 h1,
@@ -109,6 +267,9 @@ h3 {
 
 /* Phones: pictures are smaller */
 @media (max-width: 767px) {
+  .featured-photo { height: 280px; }
+  .gallery-thumb img { height: 65px; }
+
   .hero img {
     height: 260px;
   }

@@ -3,16 +3,21 @@
 <head>
   <!-- Made by Dinmukhamed -->
   <meta charset="UTF-8">
+  <link rel="icon" href="data:,">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Formula 1</title>
   <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link href="vendor/bootstrap.min.css" rel="stylesheet">
   <!-- My CSS -->
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/paddock.css">
+  <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+  <script>window.jQuery || document.write('<script src="vendor/jquery-4.0.0.min.js"><\/script>');</script>
+  <script src="js/script.js"></script>
 </head>
 <body>
+  <div class="scroll-track" aria-hidden="true"><div id="scroll-progress"></div></div>
 
-  <!-- Task 5: Bootstrap navbar -->
   <header>
     <nav class="navbar navbar-expand-lg bg-black" data-bs-theme="dark">
       <div class="container-fluid px-4">
@@ -21,43 +26,31 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
+          <ul class="navbar-nav ms-auto main-nav">
             <li class="nav-item"><a class="nav-link fw-bold active" aria-current="page" href="index.html">Home</a></li>
             <li class="nav-item"><a class="nav-link fw-bold" href="index.html#drivers">Drivers</a></li>
-            <li class="nav-item"><a class="nav-link fw-bold" href="gallery.html">Gallery</a></li>
             <li class="nav-item"><a class="nav-link fw-bold" href="teams.html">Teams</a></li>
-            <li class="nav-item"><a class="nav-link fw-bold" href="index.html#contact">Contact</a></li>
+            <li class="nav-item"><a class="nav-link fw-bold" href="gallery.html">Gallery</a></li>
+            <li class="nav-item"><a class="nav-link fw-bold" href="fan-zone.html">Fan zone</a></li>
+            <li class="nav-item"><a class="nav-link fw-bold" href="contact.html">Contact</a></li>
           </ul>
         </div>
       </div>
     </nav>
   </header>
 
-  <!-- Task 3: Bootstrap grid - sidebar (3 columns) + main content (9 columns) -->
   <div class="container-fluid">
     <div class="row">
 
-      <aside class="col-lg-3 sidebar p-4">
-        <h2 class="fs-5">Quick links</h2>
-        <div class="list-group">
-          <a href="verstappen.html" class="list-group-item list-group-item-action">Max Verstappen</a>
-          <a href="kimi.html" class="list-group-item list-group-item-action">Kimi Antonelli</a>
-          <a href="shumakher.html" class="list-group-item list-group-item-action">Michael Schumacher</a>
-          <a href="gallery.html" class="list-group-item list-group-item-action">Gallery</a>
-          <a href="index.html#race-weekend" class="list-group-item list-group-item-action">Race weekend</a>
-        </div>
-      </aside>
+      <main class="col-12 site-main py-4 px-3 px-lg-5">
 
-      <main class="col-lg-9 py-4 px-3 px-lg-5">
-
-        <!-- Task 3: section with two columns (col-lg-6) -->
         <section class="hero p-4 mb-5">
           <div class="row g-4 align-items-center">
             <div class="col-lg-6">
               <p class="eyebrow mb-1">Formula 1</p>
               <h1>Welcome to Formula&nbsp;1</h1>
               <p class="lead">Formula 1 is a popular car racing sport. Drivers race very fast cars on tracks around the world.</p>
-              <!-- Task 6: Bootstrap buttons -->
+
               <div class="mt-3 mt-lg-4">
                 <a href="#drivers" class="btn btn-danger btn-lg me-2 mb-2">Meet the drivers</a>
                 <a href="gallery.html" class="btn btn-outline-dark btn-lg mb-2">Open gallery</a>
@@ -69,39 +62,43 @@
           </div>
         </section>
 
-        <!-- Task 8: Bootstrap cards in a card-group -->
         <section id="drivers" class="mb-5">
           <p class="eyebrow mb-1">Drivers</p>
           <h2 class="mb-3">Formula 1 stars</h2>
-          <div class="card-group">
-            <article class="card driver-card">
+          <div class="driver-search mb-3">
+            <label class="form-label fw-bold" for="driver-query">Search the driver profiles</label>
+            <input id="driver-query" class="form-control" type="search" placeholder="Try a name, team or keyword" autocomplete="off" aria-controls="driver-results">
+            <div id="driver-suggestions" aria-label="Suggested driver profiles" hidden></div>
+          </div>
+          <p id="driver-count" class="small text-secondary" role="status">3 driver profiles</p>
+          <div id="driver-results" class="row row-cols-1 row-cols-md-3 g-3">
+            <div class="col"><article class="card h-100 driver-card">
               <img src="images/max-verstappen.jpg" class="card-img-top" alt="Max Verstappen">
               <div class="card-body">
                 <h5 class="card-title">Max Verstappen</h5>
                 <p class="card-text">Red Bull Racing driver and multiple Formula 1 World Champion.</p>
                 <a href="verstappen.html" class="btn btn-outline-danger btn-sm">Read about Max</a>
               </div>
-            </article>
-            <article class="card driver-card">
+            </article></div>
+            <div class="col"><article class="card h-100 driver-card">
               <img src="images/Kimi3.jpg" class="card-img-top" alt="Kimi Antonelli">
               <div class="card-body">
                 <h5 class="card-title">Kimi Antonelli</h5>
                 <p class="card-text">A young Mercedes driver with strong pace and potential.</p>
                 <a href="kimi.html" class="btn btn-outline-danger btn-sm">Read about Kimi</a>
               </div>
-            </article>
-            <article class="card driver-card">
+            </article></div>
+            <div class="col"><article class="card h-100 driver-card">
               <img src="images/Michael1.jpg" class="card-img-top" alt="Michael Schumacher">
               <div class="card-body">
                 <h5 class="card-title">Michael Schumacher</h5>
                 <p class="card-text">A Formula 1 legend and seven-time World Champion.</p>
                 <a href="shumakher.html" class="btn btn-outline-danger btn-sm">Read about Michael</a>
               </div>
-            </article>
+            </article></div>
           </div>
         </section>
 
-        <!-- Task 3: section with three columns (col-lg-4) -->
         <section id="race-weekend" class="mb-5">
           <h2 class="mb-3">Race weekend</h2>
           <div class="row g-3 mb-4">
@@ -125,6 +122,18 @@
             </div>
           </div>
 
+          <aside class="race-stats mb-4" aria-label="Race weekend at a glance">
+            <div><strong data-count="3">3</strong><span>Weekend days</span></div>
+            <div><strong data-count="60">60</strong><span>Minutes in one practice session</span></div>
+          </aside>
+
+          <div class="copy-panel mb-4">
+            <div><p class="eyebrow mb-1">Weekend reminder</p>
+              <p id="weekend-note" class="mb-0">Friday: Practice. Saturday: Qualifying. Sunday: Race.</p></div>
+            <button id="copy-note" class="btn btn-outline-dark" type="button"><span aria-hidden="true">⧉</span> Copy</button>
+            <span id="copy-tip" role="status"></span>
+          </div>
+
           <table class="table table-bordered table-striped">
             <caption>F1 weekend schedule</caption>
             <thead class="table-dark">
@@ -138,82 +147,33 @@
           </table>
         </section>
 
-        <section class="card mb-5">
-          <div class="card-body p-4">
-            <h2>About team members</h2>
-            <p>Our team has two students. We chose Formula 1 because we like cars and racing.</p>
-            <ul class="mb-0">
-              <li>Dinmukhamed: Home page and Max Verstappen page.</li>
-              <li>Asylzhan: Kimi Antonelli and Michael Schumacher pages.</li>
-            </ul>
-          </div>
-        </section>
-
-        <!-- Task 9: form with Bootstrap classes -->
-        <section id="contact" class="card">
-          <div class="card-body p-4">
-            <h2 class="mb-3">Contact form</h2>
-            <form action="#contact" method="get" class="px-sm-2">
-              <div class="row">
-                <div class="col-md-6 mb-3">
-                  <label for="name" class="form-label">Name</label>
-                  <input type="text" class="form-control" id="name" name="name" required>
-                </div>
-                <div class="col-md-6 mb-3">
-                  <label for="email" class="form-label">Email</label>
-                  <div class="input-group">
-                    <span class="input-group-text">@</span>
-                    <input type="email" class="form-control" id="email" name="email" required>
-                  </div>
-                </div>
-              </div>
-
-              <div class="mb-3">
-                <label for="colour" class="form-label">Favourite team colour</label>
-                <select class="form-select" id="colour" name="colour" required>
-                  <option value="">Choose one</option>
-                  <option value="red">Red</option>
-                  <option value="blue">Blue</option>
-                  <option value="silver">Silver</option>
-                </select>
-              </div>
-
-              <div class="mb-3">
-                <p class="mb-1">Favourite driver</p>
-                <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="driver" id="driverMax" value="max" checked>
-                  <label class="form-check-label" for="driverMax">Max</label>
-                </div>
-                <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="driver" id="driverKimi" value="kimi">
-                  <label class="form-check-label" for="driverKimi">Kimi</label>
-                </div>
-                <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="driver" id="driverMichael" value="michael">
-                  <label class="form-check-label" for="driverMichael">Michael</label>
-                </div>
-              </div>
-
-              <div class="mb-3">
-                <label for="message" class="form-label">Message</label>
-                <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
-              </div>
-
-              <button type="submit" class="btn btn-danger">Send</button>
-              <button type="reset" class="btn btn-secondary">Clear</button>
-            </form>
+        <section class="mb-4" aria-labelledby="explore-heading">
+          <h2 id="explore-heading" class="mb-3">Explore the site</h2>
+          <div class="row g-3">
+            <div class="col-md-4"><div class="card h-100"><div class="card-body">
+              <h3 class="h5">Teams</h3><p>Meet the people behind the cars.</p>
+              <a href="teams.html" class="btn btn-outline-danger">See teams</a>
+            </div></div></div>
+            <div class="col-md-4"><div class="card h-100"><div class="card-body">
+              <h3 class="h5">Fan zone</h3><p>Explore a race weekend and try the race lights.</p>
+              <a href="fan-zone.html" class="btn btn-outline-danger">Open Fan zone</a>
+            </div></div></div>
+            <div class="col-md-4"><div class="card h-100"><div class="card-body">
+              <h3 class="h5">Contact</h3><p>Find forms, subscription and common questions.</p>
+              <a href="contact.html" class="btn btn-outline-danger">Get in touch</a>
+            </div></div></div>
           </div>
         </section>
 
       </main>
     </div>
   </div>
-
   <footer class="bg-dark text-white text-center py-3">
-    <p class="mb-0">Team members: Dinmukhamed and Asylzhan</p>
+    <p class="mb-0">Team members: Dinmukhamed Tamdybek and Asylzhan Abdukadirov</p>
   </footer>
 
-  <!-- Bootstrap JS (for the navbar button and the carousel) -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  <!-- Bootstrap JavaScript for the mobile navigation -->
+  <script src="vendor/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>

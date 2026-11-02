@@ -1,10 +1,4 @@
-/* Part 1: Media Queries (teams.html)
-   This page does not use Bootstrap, only this CSS file.
-
-   Screen sizes:
-   Mobile  - less than 768px (normal styles, no media query)
-   Tablet  - from 768px  -> @media (min-width: 768px)
-   Desktop - from 992px  -> @media (min-width: 992px) */
+/* Responsive styles for the teams page. */
 
 * {
   box-sizing: border-box;
@@ -76,7 +70,7 @@ h3 {
   margin: 0;
 }
 
-/* ===== Task 1: Responsive typography ===== */
+
 
 /* Mobile: small text */
 h1 {
@@ -133,7 +127,7 @@ p {
   }
 }
 
-/* ===== Task 2: Card group ===== */
+
 
 /* Mobile: cards one under another */
 .team-cards {
@@ -190,42 +184,4 @@ p {
 
 .team-link:hover {
   text-decoration: underline;
-}
-
-/* ===== "Current layout" text ===== */
-.screen-size {
-  display: inline-block;
-  padding: 6px 14px;
-  border-radius: 20px;
-  background: #222222;
-  color: #ffffff;
-  font-size: 14px;
-}
-
-/* Mobile: show only "Mobile" */
-.tablet-text,
-.desktop-text {
-  display: none;
-}
-
-/* Tablet: show only "Tablet" */
-@media (min-width: 768px) {
-  .mobile-text {
-    display: none;
-  }
-
-  .tablet-text {
-    display: inline;
-  }
-}
-
-/* Desktop: show only "Desktop" */
-@media (min-width: 992px) {
-  .tablet-text {
-    display: none;
-  }
-
-  .desktop-text {
-    display: inline;
-  }
 }
